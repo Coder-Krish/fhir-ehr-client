@@ -1,0 +1,134 @@
+<div class="container mx-auto px-4 py-8">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-teal-600 text-white py-4 px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-semibold">{{ patient?.name?.[0]?.family }}, {{ patient?.name?.[0]?.given?.[0]
+                }}({{patient?.gender}})</h1>
+            <button [routerLink]="['/list-patients']"
+                class="text-white hover:text-teal-200 transition duration-300 focus:outline-none" aria-label="Close">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+        </div>
+        <div class="flex">
+            <!-- Sidebar Menu -->
+            <nav class="w-1/4 bg-gray-100 p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'vitals']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Vitals
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'soap']" routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            SOAP Notes
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'clinical-notes']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Clinical Notes
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'medications']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Medications
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'allergies']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Allergies
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'conditions']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'care-plans']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Care Plans
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'procedures']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Procedures
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'immunizations']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Immunizations
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'diagnostic-reports']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Diagnostic Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'documents']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Documents
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'appointments']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'communication']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Communication
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'insurance']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Insurance & Claims
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'patient-portal']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Patient Portal
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/clinical', patientId, 'reports']"
+                            routerLinkActive="bg-teal-100 text-teal-600"
+                            class="block px-4 py-2 rounded-md text-gray-700 hover:bg-teal-200 transition duration-200">
+                            Reports & Analytics
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Content Area -->
+            <main class="w-3/4 p-6">
+                <router-outlet />
+            </main>
+        </div>
+    </div>
+</div>
